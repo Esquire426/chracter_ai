@@ -4,13 +4,15 @@ from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 from openai import OpenAI
 import os
+import sys
+print(sys.version)
 
 # ==================== تنظیمات ====================
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")  # خالی بذار، بعداً تو رندر پر میشه
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")      # خالی بذار، بعداً تو رندر پر میشه
 
 # تنظیمات Groq
-MODEL = "llama-3.3-70b-versatile"
+MODEL = "openai/gpt-oss-120b"
 BASE_URL = "https://api.groq.com/openai/v1"
 
 # ایدی Paria (اینجا وارد کن)
